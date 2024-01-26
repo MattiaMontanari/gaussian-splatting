@@ -1,3 +1,19 @@
+
+Try with Docker compose from this issue: https://github.com/graphdeco-inria/gaussian-splatting/issues/268
+
+it works:
+- first time run `docker compose run --rm splat` to build the container (take 10 minutes or more) this will run interactive container
+- Copy a video in the `data/new_video` folder by creating its new video
+- ffmpeg -i Summiting\ the\ Matterhorn\ with\ an\ FPV\ Drone.mp4 -qscale:v 1 -qmin 1 -vf fps=10 %04d.jpg
+  - ! I do have an ffmpeg incompatibility that I resolved with a dirty fix, I need better splutpoin
+- move all image into a new input folder
+- Launch pyconvert && pytrain
+
+
+
+
+---
+
 # 3D Gaussian Splatting for Real-Time Radiance Field Rendering
 Bernhard Kerbl*, Georgios Kopanas*, Thomas Leimkühler, George Drettakis (* indicates equal contribution)<br>
 | [Webpage](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/) | [Full Paper](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/3d_gaussian_splatting_high.pdf) | [Video](https://youtu.be/T_kXY43VZnk) | [Other GRAPHDECO Publications](http://www-sop.inria.fr/reves/publis/gdindex.php) | [FUNGRAPH project page](https://fungraph.inria.fr) |<br>

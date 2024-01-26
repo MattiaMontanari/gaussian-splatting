@@ -5,7 +5,7 @@ services:
     stdin_open: true
     tty: true
     build: .
-    image: xxxxxxxxxx/gaussian-splatting:cuda-11.7
+    image: xxmatti
     network_mode: host
     environment:
       - DISPLAY
